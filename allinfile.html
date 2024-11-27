@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script>
+		function expandDiv() {
+			const div = document.getElementById('s-div');
+			div.classList.add('exp-0');
+			const div_o = document.getElementById('search-section');
+			div_o.classList.add('vis');
+			const div_i = document.getElementById('info-list');
+			div_i.classList.add('blur');
+		}
+
+		function shrinkDiv() {
+			const div = document.getElementById('s-div');
+			div.classList.remove('exp-0');
+			const div_o = document.getElementById('search-section');
+			div_o.classList.remove('vis');
+			const div_i = document.getElementById('info-list');
+			div_i.classList.remove('blur');
+		}
+
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const in0 = document.getElementById('in0');
+
+			in0.addEventListener('keydown', function (event) {
+				if (event.key === 'Enter') {
+					in0.blur(); // Вызываем событие onblur
+				}
+			});
+		})
+
+	</script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "Roboto", sans-serif;
+			font-style: normal;
+		}
+
+		:root {
+			--transition-effect: all 0.3s cubic-bezier(.77, 0, .18, 1);
+		}
+
+		p {
+			margin: 10px;
+		}
+
+		.s-div {
+			width: 90%;
+			height: 5vh;
+			position: fixed;
+			text-align: left;
+			padding: 6px 15px;
+			box-sizing: border-box;
+			z-index: 1000;
+			top: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 30px;
+			/*border: 1px solid rgba(127, 127, 127, 0.4);*/
+			background-color: rgba(255, 255, 255, 0.2);
+			color: rgba(10, 8, 8, 0.5);
+			box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+
+			transition: var(--transition-effect);
+
+		}
+
+		.s-div.exp-0 {
+			padding: 15px 15px;
+			border-radius: 25px;
+			height: 600px;
+			color: black;
+			background-color: rgba(255, 255, 255, 0.95);
+			border: none;
+			box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+		}
+
+
+		.main-input {
+			width: 100%;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			/*border-bottom: 1px solid rgba(0, 0, 0, 0.3);*/
+			box-sizing: border-box;
+			padding: 5px;
+			transition: var(--transition-effect);
+			color: rgba(0, 0, 0, 0.24);
+		}
+
+		.main-input:focus {
+			/*border: 1px solid rgb(41, 96, 216);  Убедитесь, что здесь задана рамка */
+			outline: none;
+			/* Убираем стандартный контур */
+			padding-bottom: 10px;
+			border-bottom: 1px solid rgb(0, 0, 0);
+			margin-bottom: 5vh;
+			font-size: 16px;
+			color: black;
+
+		}
+
+
+
+		.search-block {
+			width: 100%;
+			height: 35px;
+			text-align: left;
+			padding: 5px;
+			box-sizing: border-box;
+			border-bottom: 1px solid rgba(0, 0, 0, .4);
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+		}
+
+		.search-section {
+			opacity: 0;
+			transition: var(--transition-effect);
+
+		}
+
+		.search-section.vis {
+			opacity: 1;
+		}
+
+
+
+
+		.info-list {
+			filter: blur(0px);
+			transition: var(--transition-effect);
+		}
+
+		.info-list.blur {
+			filter: blur(8px);
+		}
+
+
+		.info-block {
+			width: 100%;
+			height: 10vh;
+			background-color: azure;
+			border: 1px solid black;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="s-div" id="s-div">
+		<input type="text" class="main-input" id="in0" onfocus="expandDiv()" onblur="shrinkDiv()" placeholder="Search">
+		<div class="search-section" id="search-section">
+			<div class="search-block">
+				<p style="margin: 0; text-decoration: underline; cursor: pointer;">Close ❌ View 💭</p>
+
+			</div>
+			<div class="search-block">
+				<a href="">Some text</a>
+			</div>
+		</div>
+
+	</div>
+	<div class="info-list" id="info-list">
+		<div class="info-block">
+
+		</div>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p>fslsflkesnf</p>
+		<p style="margin-top: 1000px;">fsdf</p>
+	</div>
+
+
+</body>
+
+</html>

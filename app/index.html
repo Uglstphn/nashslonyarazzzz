@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример POST-запроса</title>
+</head>
+<body>
+    <h1>Отправка данных на Flask-сервис</h1>
+    <button id="sendData">Отправить данные</button>
+    <pre id="response"></pre>
+
+    <script>
+        document.getElementById('sendData').addEventListener('click', () => {
+            // Пример данных, которые вы хотите отправить
+            const dataToSend = {
+                param1: "значение1",
+                param2: "значение2"
+            };
+
+            fetch('https://osat.pythonanywhere.com/api/data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataToSend)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Сеть ответила с ошибкой: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Произошла ошибка:', error);
+                document.getElementById('response').textContent = 'Ошибка: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style_dark.css" id="theme-link">
+	<script src="js.js"></script>
+	<script src="app.js"></script>
+	<script src="runtime.js"></script>
+	<script src="init.js"></script>
+</head>
+
+<body>
+	<div class="s-div" id="s-div">
+		<input type="text" class="main-input" id="in0" onfocus="expandDiv()" onblur="" placeholder="Search">
+		<div class="search-section" id="search-section">
+			<div class="search-service-block">
+				<p style="margin: 0; cursor: pointer;" onclick="shrinkDiv()">Close ❌</p>
+				<!--p style="margin: 0; text-decoration: underline; cursor: pointer;" onclick="shrinkDiv()	">View 💭</p-->
+			</div>
+			<div class="search-block">
+				<a href="https://google.com" target="_blank">Google</a>
+			</div>
+			<!--div class="search-block">
+				<a href="">Some text</a>
+			</div>
+			<div class="search-block">
+				<a href="">Some text</a>
+			</div>
+			<div class="search-block">
+				<a href="">Some text</a>
+			</div-->
+		</div>
+
+	</div>
+	<div class="info-list" id="info-list" onclick="shrinkDiv()">
+		<div class="info-block-default">
+
+		</div>
+
+		<!-- <div class="info-block">
+			<span>sfkjnaf</span>
+		</div> -->
+
+
+		<div class="info-card">
+			<div class="info-date">
+				<span>11 ноя. пн</span>
+			</div>
+
+			<div class="info-block-n">
+				<div class="info-block-ingrid-num">1</div>
+				<div class="info-block-ingrid-t">Инютин М. С.</div>
+				<div class="info-block-ingrid-s">Основы алгоритмизации и программирования</div>
+				<div class="info-block-ingrid-с">Лек.</div>
+				<div class="info-block-ingrid-w">СО 109а</div>
+				
+				<!-- <span class="info-tname">Инютин М. С.</span><br>
+				<span class="info-sname">Основы алгоритмизации и программирования</span> -->
+			</div>
+		</div>
+
+
+		<div class="info-card">
+			<div class="info-date-clear">
+				<span>11 ноя. пн</span>
+			</div>
+
+			<div class="info-block-clear">
+				<span>...</span>
+			</div>
+			<!-- <div class="info-block-n">
+				<div class="info-block-ingrid-num">1</div>
+				<div class="info-block-ingrid-t">Инютин М. С.</div>
+				<div class="info-block-ingrid-s">Основы алгоритмизации и программирования</div>
+				<div class="info-block-ingrid-с">Лек.</div>
+				<div class="info-block-ingrid-w">СО 109а</div>
+			</div> -->
+		</div>
+
+
+	</div>
+
+
+</body>
+
+</html>

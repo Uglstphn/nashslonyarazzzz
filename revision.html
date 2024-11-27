@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</html  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <style>
+        body {
+            background: white;
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение линий */
+            align-items: center;
+            height: 100vh; /* Занять всю высоту экрана */
+            margin: 0; /* Убрать отступы */
+        }
+        .schedule {
+            display: flex;
+            flex-wrap: wrap; /*  перенос элемента на новую строку */
+            justify-content: space-between; /* Распределяет пространство между элементами */
+            width: 80%; /* Ширина контейнера */
+            margin-bottom: 20px; /* Отступ между линиями */
+        }
+        section {
+            background: rgb(26, 25, 25);
+            color: white;
+            border-radius: 1em;
+            padding: 1em;
+            flex: 1 1 calc(16% - 10px); /* ширина секций */
+            margin: 5px; /* Отступы между секциями */
+            box-sizing: border-box; /* Учитывает отступы и границы в ширине */
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .schedule {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .class-info {
+            background-color: #e7f3fe;
+            border-left: 5px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .schedule {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Первая неделя -->
+    <div class="schedule">
+        <section>
+            <h1>Понедельник</h1>
+            <div class="class-info">
+                <p>12:50 - 11:20<br>СО 109а<br>Основы алгоритмизации и программирования<br>Инютин М. С.<br>Лек, ИСПб_2-030<br>2024-11-11</p>
+            </div>
+            <div class="class-info">
+                <p>11:20<br>СО 109а<br>Основы алгоритмизации и программирования<br>Инютин М. С.<br>Лек, ИСПб_2-030<br>2024-11-11</p>
+            </div>
+        </section>
+        <section>
+            <h1>Вторник</h1>
+            <p>бао.ьытвф.дл</p>
+        </section>
+        <section>
+            <h1>Среда</h1>
+            <p>дывофтаюфыв</p>
+        </section>
+        <section>
+            <h1>Четверг</h1>
+            <p>ывд.о аф.дыв</p>
+        </section>
+        <section>
+            <h1>Пятница</h1>
+            <p>юбывтф  афы</p>
+        </section>
+        <section>
+            <h1>Суббота</h1>
+            <p>ывьфта </p>
+        </section>
+    </div>
+
+    <!-- Вторая неделя -->
+    <div class="schedule">
+        <section>
+            <h1>Понедельник</h1>
+            <p>ыфваывфа</p>
+        </section>
+        <section>
+            <h1>Вторник</h1>
+            <p>ыавфыавф</p>
+        </section>
+        <section>
+            <h1>Среда</h1>
+            <p>ывафыавфваыф</p>
+        </section>
+        <section>
+            <h1>Четверг</h1>
+            <p>ывафывааывафыв</p>
+        </section>
+        <section>
+            <h1>Пятница</h1>
+            <p>ваыфыафвавыф</p>
+        </section>
+        <section>
+            <h1>Суббота</h1>
+            <p>аываывфаывф</p>
+        </section>
+    </div>
+
+    <!-- Третья неделя -->
+    <div class="schedule">
+        <section>
+            <h1>Понедельник</h1>
+            <p>ывааывфыавфаывф</p>
+        </section>
+        <section>
+            <h1>Вторник</h1>
+            <p>аыфыавффв</p>
+        </section>
+        <section>
+            <h1>Среда</h1>
+            <p>ывафыавфав</p>
+        </section>
+        <section>
+            <h1>Четверг</h1>
+            <p>ывааываывф</p>
+        </section>
+        <section>
+            <h1>Пятница</h1>
+            <p>ыаваывыафв</p>
+        </section>
+        <section>
+            <h1>Суббота</h1>
+            <p>ыавфыафваывф</p>
+        </section>
+    </div>
+
+    <!-- Четвертая неделя -->
+    <div class="schedule">
+        <section>
+            <h1>Понедельник</h1>
+            <p>ывафаывфаывф</p>
+        </section>
+        <section>
+            <h1>Вторник</h1>
+            <p>ыавфыафваывф</p>
+        </section>
+        <section>
+            <h1>Среда</h1>
+            <p>ыавфыафваывф</p>
+        </section>
+        <section>
+            <h1>Четверг</h1>
+            <p>ыавфыафваывф</p>
+        </section>
+        <section>
+            <h1>Пятница</h1>
+            <p>ыавфыафваывф</p>
+        </section>
+        <section>
+            <h1>Суббота</h1>
+            <p>ыавфыафваывф</p>
+        </section>
+    </div>
+
+</body>
+</html>
